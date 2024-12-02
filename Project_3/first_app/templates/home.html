@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is HOME PAGE</h1>
+    <h2>Author : {{author}}</h2>
+    <h2>Age : {{age}}</h2>
+    <h2>List : {{lst}}</h2>
+
+
+    {% comment %} Conditional Statement {% endcomment %}
+    {% if age >= 20%}
+    <h2>You will get driving license</h2>
+    {% elif age >= 10 and age <= 19 %}
+    <h2>You will not get driving license</h2>
+    {% else %}
+    <h2>You're a child</h2>
+    {% endif %}
+    
+    {% comment %} For Loop  {% endcomment %}
+    {% for i in course %}
+        <h1>{{i.id}} . {{i.name}} {{i.fee}}</h1>
+    
+    {% endfor %}
+    
+
+
+
+
+    {% comment %} filter join function  {% endcomment %}
+    {{ lst }}
+    <h2>{{ lst | join:" // " }}</h2>
+
+    {% comment %} birthbay  {% endcomment %}
+    <h2>{{ birthday | date:"D d M Y" }}</h2>
+
+    {% comment %} empty value  {% endcomment %}
+    <h2>{{ value | default:"nothing here" }}</h2>
+
+    {% comment %} linenumber coutn  {% endcomment %}
+    <h2>{{ animal | linenumbers }}</h2>
+    
+</body>
+</html>
