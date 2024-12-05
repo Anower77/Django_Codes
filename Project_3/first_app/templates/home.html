@@ -13,20 +13,20 @@
 
 
     {% comment %} Conditional Statement {% endcomment %}
-    {% if age >= 20%}
-    <h2>You will get driving license</h2>
+    {% if age >= 20 %}
+        <h2>You will get driving license</h2>
     {% elif age >= 10 and age <= 19 %}
-    <h2>You will not get driving license</h2>
+        <h2>You will not get driving license</h2>
     {% else %}
-    <h2>You're a child</h2>
+        <h2>You're a child</h2>
     {% endif %}
     
     {% comment %} For Loop  {% endcomment %}
     {% for i in course %}
         <h1>{{i.id}} . {{i.name}} {{i.fee}}</h1>
-    
     {% endfor %}
     
+    {% comment %} conditional end {% endcomment %}
 
 
 
