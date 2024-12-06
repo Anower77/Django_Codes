@@ -1,0 +1,35 @@
+{% extends 'base.html '%} 
+{% block content %}
+
+{% comment %} POST(not-show) / GET(show-pass-email) {% endcomment %}
+
+<div style="width: 50%; height: 500px; margin: auto" class="pt-5">
+    <h3>Class Rating Form</h3>
+    <form method ='post' action='/about/'> 
+        {% csrf_token %}
+
+        <div class="mb-3">
+        <label for="exampleInputName" class="form-label">Name</label>
+        <input type="text" class="form-control" id="exampleInputName" name = "username" aria-describedby="nameHelp">
+        </div>
+        <div class="mb-3">
+        <label for="exampleInputEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" name = "email" id="exampleInputEmail" aria-describedby="nameHelp">
+        </div>
+        
+        <select class="form-select" aria-label="Default select example" name = 'select'>
+            <option selected>Rating.</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% comment %} 
+<h3>Name : {{name}}</h3>
+<h3>Email : {{email}}</h3>
+{% endcomment %}
+
+{%endblock%}
